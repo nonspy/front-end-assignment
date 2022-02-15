@@ -1,15 +1,17 @@
+@import 'variables'
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap')
 
 html, body
   background-color: #F7F8FA
-  font-family: 'Poppins', sans-serif
+  font-family: $primary-font
   height: 100vh
-  color: #46444c
+  color: $text-color
   position: relative
+  font-size: 16px
 
 body:before
   content: ''
-  background: #5A45FF
+  background: $accent-color
   top: 0
   left: 0
   right: 0
@@ -21,23 +23,14 @@ body:before
   padding: 0
 
 a
-  color: #5A45FF
+  color: $accent-color
   text-decoration: none
-
-main
-  max-width: 620px
-  margin: auto
-  height: 100vh
-  padding: 0 30px
-  align-items: center
-  display: flex
-  justify-content: center
 
 .title
   font-size: 50px
   line-height: 50px
   margin-bottom: 10px
-  color: #17161A
+  color: $dark-color
 
 .subtitle
   font-size: 26px
@@ -47,6 +40,32 @@ p
   margin-bottom: 20px
 
 main
+  max-width: 100%
+  margin: auto
+  height: 100vh
+  display: flex
+  justify-content: center
+
+  button
+    background-color: transparent
+    border: 2px solid $accent-color
+    border-radius: 2em
+    color: $accent-color
+    padding: 0.5em 1.2em
+    margin-bottom: 1em
+    font-size: 0.8em
+    font-weight: 700
+    cursor: pointer
+    transition: background-color,color 200ms ease-out
+
+    &:hover
+      color: $light-color
+      background-color: $accent-color
+
+  section
+    max-width: 620px
+    padding: 30px
+
   ul
     list-style: none
 
@@ -56,13 +75,3 @@ main
   li
     margin-bottom: 5px
     position: relative
-    padding-left: 25px
-
-    &:before
-      content: '—'
-      position: absolute
-      left: 0
-
-  code
-    font-size: 16px
-    background: #e6e2ff
