@@ -1,2 +1,2 @@
-import '../css/app.css'
+import '../sass/common.sass'
 import '../../src/BaconApp'
