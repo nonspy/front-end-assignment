@@ -10,6 +10,7 @@
   "compilerOptions": {
     "outDir": "build",
     "rootDir": "./",
+    "lib": ["es5", "es6", "dom"],
     "sourceMap": true,
     "paths": {
       "App/*": [
@@ -31,6 +32,7 @@
       "@adonisjs/session",
       "@adonisjs/view",
       "@adonisjs/shield"
-    ]
+    ],
+    "jsx": "react"
   }
 }
