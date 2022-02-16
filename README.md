@@ -1,3 +1,29 @@
+# Completion Notes
+
+TL;DR
+
+Your game my rules.
+
+Thank you for getting me familiar with Adonis. Never used it before However, it is pretty close to common MVC monolith 
+paradigms used in frameworks like Laravel + eloquent or Symfony . Interesting framework to play around btw.
+
+
+As soon as You are challenging me for React frontend position I've decided to inject React instead of using vanilla ts 
+or any other js lib. Also seems this example should utilize Adonis separation of views, so I've decided not
+to use SPA but better inject differently bootstrapped react instances twice. Of course this is not a real case for such a product.
+
+
+For the first task ive transpiled css to sass and thought about applying BEM however this obviously would look little 
+verbose then imho. So I ve just scoped css needed for bacon and used styled components for form.
+
+For the second and further tasks I ve used both BEM with Adonis component and styled-components with Material-UI just 
+for demonstration purposes.
+
+Tried to structure form dependencies like in real life. You may think it is overcomplicated but in general it is pretty well
+scalable and reusable.
+
+Thank you
+
 # Marketer Front-end Assignment
 
 * Please use real Github accounts, as we check for contribution history. However, if you want to stay anonymous, please send patch instead.
