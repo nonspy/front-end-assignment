@@ -2,7 +2,7 @@ import { string, object } from "yup"
 import "yup-phone"
 
 const personalInfoSchema = object().shape({
-  firstName: string().required(),
+  firstName: string(),
   lastName: string().required(),
   email: string().email().required(),
   country: string().required(),

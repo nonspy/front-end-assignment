@@ -1,10 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import { yupResolver } from "@hookform/resolvers/yup"
 import { useForm } from "react-hook-form"
 import { styled } from "@mui/material/styles"
 import { Box, Button } from "@mui/material"
 import LockIcon from '@mui/icons-material/Lock'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import axios from "axios"
 
 import PaymentDetailsForm from "../../forms/PaymentDetailsForm"
 import PersonalInfoForm from "../../forms/PersonalInfoForm"
@@ -12,6 +13,9 @@ import { CheckoutType } from "../../types/checkout"
 import paymentDetailsSchema from "../../forms/PaymentDetailsForm/paymentDetailsSchema"
 import personalInfoSchema from "../../forms/PersonalInfoForm/personalInfoSchema"
 import { CountriesEnum } from "../../enums/common"
+import SuccessModal from "../SuccessModal"
+import { ErrorType } from "../../types/common"
+import ErrorAlert from "../ErrorAlert"
 
 const StyledButton = styled(Button)(({ theme }) => ({
   backgroundColor: "#6bd400",
@@ -45,6 +49,8 @@ const StyledHeading = styled("h3")(({ theme }) => ({
 }))
 
 const CheckOut: React.FC = () => {
+  const [errors, setErrors] = useState<ErrorType[]>([])
+  const [success, setSuccess] = useState<boolean>(false)
   const {
     handleSubmit,
     control,
@@ -63,7 +69,16 @@ const CheckOut: React.FC = () => {
     },
   })
 
-  const onSubmit = handleSubmit(() => false)
+  const onSubmit = handleSubmit(data => {
+    axios.post("/order", data)
+      .then(response => {
+        if (response.status === 200)
+        setSuccess(true)
+      })
+      .catch(error => {
+        setErrors(error.response.data.errors)
+      })
+  })
 
   return (
     <Box
@@ -72,6 +87,7 @@ const CheckOut: React.FC = () => {
       autoComplete="off"
       onSubmit={onSubmit}
     >
+      <ErrorAlert errors={errors} />
       <StyledHeading>Personal information</StyledHeading>
       <Box component="div" sx={{ mb: 3 }}>
         <PersonalInfoForm control={control} />
@@ -87,6 +103,7 @@ const CheckOut: React.FC = () => {
         <ShoppingCartIcon sx={{ mr: 0.8, fontSize: "1.3em" }} />
         Complete purchase
       </StyledButton>
+      <SuccessModal open={success} onClose={() => setSuccess(false)} />
     </Box>
   )
 }
