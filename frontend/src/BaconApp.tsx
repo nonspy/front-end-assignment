@@ -1,6 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import Bacon from "./components/Bacon/Bacon"
+import Bacon from "./components/Bacon"
 
 const node = document.getElementById("bacon")
 

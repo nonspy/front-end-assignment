@@ -199,6 +199,8 @@ config.infrastructureLogging = {
 }
 config.stats = 'errors-warnings'
 
+config.resolve.alias['@mui/styled-engine'] = '@mui/styled-engine-sc'
+
 /*
 |--------------------------------------------------------------------------
 | Export config

@@ -1,0 +1,25 @@
+<aside class="order-details">
+  <div class="order-details--stitches">
+    <h4 class="order-details__heading">Your Order</h4>
+    <ul class="order-details__list order-details--border-bottom">
+      @each(item in cart.items)
+        <li class="order-details__list-item order-details--shrink">
+          <span>{{ item.name }}</span>
+          <span>$ {{ item.price }}</span>
+        </li>
+      @end
+    </ul>
+    <div class="order-details__subtotal order-details--shrink">
+      <span>Total purchases</span>
+      <span>$ {{ cart.totals.grandTotal }}</span>
+    </div>
+    <div class="order-details__subtotal order-details--border-bottom order-details--shrink">
+        <span>Estimated tax</span>
+        <span>$ {{ cart.totals.tax }}</span>
+    </div>
+    <div class="order-details__total order-details--shrink">
+      <strong>Total</strong>
+      <strong class="order-details__total--large">$ {{ cart.totals.grandTotal }}</strong>
+    </div>
+  </div>
+</aside>

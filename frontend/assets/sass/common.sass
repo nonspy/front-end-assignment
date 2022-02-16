@@ -1,5 +1,6 @@
 @import 'variables'
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300,400;500,700&display=swap')
 
 html, body
   background-color: #F7F8FA
@@ -39,7 +40,7 @@ a
 p
   margin-bottom: 20px
 
-main
+.main
   max-width: 100%
   margin: auto
   height: 100vh
@@ -75,3 +76,65 @@ main
   li
     margin-bottom: 5px
     position: relative
+
+.checkout
+  &__section
+    max-width: 100%
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    align-items: flex-start
+    padding: 30px
+
+  &__form
+    max-width: 600px
+    flex-grow: 1
+
+  &__order-details
+    max-width: 280px
+    margin-top: 1em
+
+.order-details
+  background-color: #ffffff
+  position: sticky
+  top: 1em
+  padding: 0.5em
+  border-radius: 4px
+  box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.15)
+  margin: 1em
+  width: 280px
+  font-size: 0.8em
+
+  &__heading
+    text-transform: uppercase
+    margin-bottom: 1em
+
+  &__list
+    list-style: none
+    margin: 0
+
+  &__total
+    &--large
+      font-size: 2em
+
+  &--border-bottom
+    padding: 0 0 1em
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.15)
+    margin-bottom: 1em
+
+  &--shrink
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    margin-bottom: 0.8em
+
+  &--stitches
+    border: 1px dashed rgba(0, 0, 0, 0.15)
+    padding: 1em
+    border-radius: 4px
+
+
+
+
+

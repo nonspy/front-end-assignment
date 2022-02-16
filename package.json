@@ -29,11 +29,18 @@
     "@adonisjs/session": "^6.0.3",
     "@adonisjs/shield": "^7.0.2",
     "@adonisjs/view": "^6.0.2",
+    "@hookform/resolvers": "^2.8.8",
+    "@mui/icons-material": "^5.4.2",
+    "@mui/material": "^5.4.2",
+    "@mui/styled-engine-sc": "^5.4.2",
     "@snowdog/front-end-recruitment-test-submodule": "^1.0.0",
     "proxy-addr": "^2.0.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-hook-form": "^7.27.0",
     "reflect-metadata": "^0.1.13",
-    "source-map-support": "^0.5.19"
+    "source-map-support": "^0.5.19",
+    "styled-components": "^5.3.3",
+    "yup": "^0.32.11"
   }
 }

@@ -1,8 +1,13 @@
 @layout('layouts/main')
-@set('title', 'Home page')
+@set('title', 'Checkout page')
 
 @section('body')
-  @!component('components/welcome', {
-    source: 'resources/views/index.edge'
-  })
+  <section class="checkout__section">
+    <div class="checkout__form" id="checkout">Please wait</div>
+    <div class="checkout__order-details">
+      @!component('components/orderDetails', {
+        cart: cart
+      })
+    </div>
+  <section>
 @end
