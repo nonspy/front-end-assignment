@@ -23,7 +23,7 @@ type FormProps = {
 const PaymentDetailsForm: React.FunctionComponent<FormProps> = ({ control }) => (
   <>
     <InputText
-      name="cardNumber"
+      name="creditCard"
       label="Credit Card Number"
       placeholder="0000 – 0000 – 0000 – 0000"
       control={control}
@@ -37,7 +37,7 @@ const PaymentDetailsForm: React.FunctionComponent<FormProps> = ({ control }) => 
     />
     <Group>
       <InputText
-        name="securityCode"
+        name="CVV"
         label="Security Code"
         placeholder="***"
         control={control}
@@ -53,7 +53,7 @@ const PaymentDetailsForm: React.FunctionComponent<FormProps> = ({ control }) => 
         required
       />
       <InputText
-        name="expirationDate"
+        name="expDate"
         label="Expiration date"
         placeholder="MM / YY"
         control={control}

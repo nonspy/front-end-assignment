@@ -8,7 +8,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 import PaymentDetailsForm from "../../forms/PaymentDetailsForm"
 import PersonalInfoForm from "../../forms/PersonalInfoForm"
-import { PurchaseType } from "../../types/purchase"
+import { CheckoutType } from "../../types/checkout"
 import paymentDetailsSchema from "../../forms/PaymentDetailsForm/paymentDetailsSchema"
 import personalInfoSchema from "../../forms/PersonalInfoForm/personalInfoSchema"
 import { CountriesEnum } from "../../enums/common"
@@ -48,7 +48,7 @@ const CheckOut: React.FC = () => {
   const {
     handleSubmit,
     control,
-  } = useForm<PurchaseType>({
+  } = useForm<CheckoutType>({
     resolver: yupResolver(paymentDetailsSchema.concat(personalInfoSchema)),
     defaultValues: {
       firstName: "",
@@ -56,10 +56,10 @@ const CheckOut: React.FC = () => {
       email: "",
       country: CountriesEnum.US,
       postalCode: "",
-      phoneNumber: "",
-      cardNumber: "",
-      securityCode: "",
-      expirationDate: ""
+      phone: "",
+      creditCard: "",
+      CVV: "",
+      expDate: ""
     },
   })
 

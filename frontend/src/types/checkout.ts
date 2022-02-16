@@ -1,13 +1,13 @@
 import { CountriesEnum } from "../enums/common"
 
-export type PurchaseType = {
+export type CheckoutType = {
   firstName: string,
   lastName: string,
   email: string,
   country: CountriesEnum,
   postalCode: string,
-  phoneNumber?: string,
-  cardNumber: string,
-  securityCode: string,
-  expirationDate: string
+  phone?: string,
+  creditCard: string,
+  CVV: string,
+  expDate: string
 }

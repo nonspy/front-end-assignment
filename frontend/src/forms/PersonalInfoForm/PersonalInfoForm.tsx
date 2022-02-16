@@ -66,11 +66,12 @@ const PersonalInfoForm: React.FunctionComponent<FormProps> = ({ control }) => (
       />
     </Group>
     <InputText
-      name="phoneNumber"
+      name="phone"
       label="Phone Number"
       placeholder="(212) 692-93-92"
       control={control}
       sx={{ mb: 2 }}
+      required
     />
   </>
 )
